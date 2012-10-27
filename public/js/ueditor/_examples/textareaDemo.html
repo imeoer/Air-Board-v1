@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+   
+    <script type="text/javascript" charset="utf-8" src="../editor_config.js"></script>
+
+    <!--使用版-->
+    <!--<script type="text/javascript" charset="utf-8" src="../editor_all.js"></script>-->
+
+    <!--开发版-->
+    <script type="text/javascript" charset="utf-8" src="editor_api.js">
+        paths = [
+            'editor.js',
+            'core/browser.js',
+            'core/utils.js',
+            'core/EventBase.js',
+            'core/dom/dom.js',
+            'core/dom/dtd.js',
+            'core/dom/domUtils.js',
+            'core/dom/Range.js',
+            'core/dom/Selection.js',
+            'core/Editor.js',
+            'commands/inserthtml.js',
+            'commands/image.js',
+            'commands/justify.js',
+            'commands/font.js',
+            'commands/link.js',
+            'commands/map.js',
+            'commands/iframe.js',
+            'commands/removeformat.js',
+            'commands/blockquote.js',
+            'commands/indent.js',
+            'commands/print.js',
+            'commands/preview.js',
+            'commands/spechars.js',
+            'commands/emotion.js',
+            'commands/selectall.js',
+            'commands/paragraph.js',
+            'commands/directionality.js',
+            'commands/horizontal.js',
+            'commands/time.js',
+            'commands/rowspacing.js',
+            'commands/lineheight.js',
+            'commands/cleardoc.js',
+            'commands/anchor.js',
+            'commands/delete.js',
+            'commands/wordcount.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/checkimage/checkimage.js',
+            'plugins/undo/undo.js',
+            'plugins/paste/paste.js', //粘贴时候的提示依赖了UI
+            'plugins/list/list.js',
+            'plugins/source/source.js',
+            'plugins/shortcutkeys/shortcutkeys.js',
+            'plugins/enterkey/enterkey.js',
+            'plugins/keystrokes/keystrokes.js',
+            'plugins/fiximgclick/fiximgclick.js',
+            'plugins/autolink/autolink.js',
+            'plugins/autoheight/autoheight.js',
+            'plugins/autofloat/autofloat.js', //依赖UEditor UI,在IE6中，会覆盖掉body的背景图属性
+            'plugins/highlight/highlight.js',
+            'plugins/serialize/serialize.js',
+            'plugins/video/video.js',
+            'plugins/table/table.js',
+            'plugins/contextmenu/contextmenu.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/basestyle/basestyle.js',
+            'plugins/elementpath/elementpath.js',
+            'plugins/formatmatch/formatmatch.js',
+            'plugins/searchreplace/searchreplace.js',
+            'plugins/customstyle/customstyle.js',
+            'ui/ui.js',
+            'ui/uiutils.js',
+            'ui/uibase.js',
+            'ui/separator.js',
+            'ui/mask.js',
+            'ui/popup.js',
+            'ui/colorpicker.js',
+            'ui/tablepicker.js',
+            'ui/stateful.js',
+            'ui/button.js',
+            'ui/splitbutton.js',
+            'ui/colorbutton.js',
+            'ui/tablebutton.js',
+            'ui/toolbar.js',
+            'ui/menu.js',
+            'ui/combox.js',
+            'ui/dialog.js',
+            'ui/menubutton.js',
+            'ui/datebutton.js',
+            'ui/editorui.js',
+            'ui/editor.js',
+            'ui/multiMenu.js'
+        ];
+    </script>
+    <style type="text/css">
+        #myEditor{
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../themes/default/ueditor.css"/>
+</head>
+<body>
+    <h1>UEditor简单功能</h1>
+
+    <!--style给定宽度可以影响编辑器的最终宽度-->
+    <textarea id="myEditor">这里是原始的textarea中的内容，可以从数据中读取</textarea>
+    <br/>
+    <input type="button" onclick="render()" value="渲染编辑器">
+    <script type="text/javascript">
+        var editor_a = new baidu.editor.ui.Editor();
+
+        //渲染编辑器
+        function render(){
+            editor_a.render('myEditor');
+        }
+    </script>
+
+</body>
+
+
+</html>

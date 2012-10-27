@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Air Board - 查看</title>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/jqScroll.js"></script>
+<script type="text/javascript" src="./js/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+<script type="text/javascript" src="./js/json2.js"></script>
+<script type="text/javascript" src="./js/view/logic.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/view.css" />
+<link rel="stylesheet" type="text/css" href="./js/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" />
+</head>
+
+<body id="body">
+	<div id="header">
+		<a id="logo" href="/"></a>
+	</div>
+	<div id="title">
+		<div id="title-logo"></div>
+		<div id="title-text">正在载入标题...</div>
+	</div>
+	<div id="view">正在载入内容...</div>
+	<div id="comment" class="frame">
+		<div id="comment-logo"></div>
+		<div id="comment-text">单击获取评论</div>
+	</div>
+	<div id="comment-view" class="frame">
+		<div id="comment-view-logo"></div>
+		<div id="comment-list">
+			<div class="comment-item">
+				<div class="comment-num">#1</div>
+				<div class="comment-time">2012/12/13 22:12:15</div>
+				<div class="comment-content">这里就是评论的内容啦</div>
+			</div>
+			<div class="comment-item">
+				<div class="comment-num">#1</div>
+				<div class="comment-time">2012/12/13 22:12:15</div>
+				<div class="comment-content">这里就是评论的内容啦</div>
+			</div>
+		</div>
+	</div>
+	<div id="my-comment" class="frame">
+		<div id="my-comment-logo"></div>
+		<div class="button" id="submit-my-comment" onclick="submitCommentHandle()">
+			<div id="button-content">提交评论</div>
+		</div>
+		<div id="my-comment-tip">剩余可评论140字</div>
+		<div id="my-comment-text">
+			<textarea id="my-comment-text-input"></textarea>
+		</div>
+	</div>
+	<span id="view-flag">${flag}</span>
+</body>
+</html>

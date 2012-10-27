@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    
+    <script type="text/javascript" charset="utf-8" src="../editor_config.js"></script>
+
+    <!--使用版-->
+    <!--<script type="text/javascript" charset="utf-8" src="../editor_all.js"></script>-->
+
+    <!--开发版-->
+    <script type="text/javascript" charset="utf-8" src="editor_api.js">
+        paths = [
+            'editor.js',
+            'core/browser.js',
+            'core/utils.js',
+            'core/EventBase.js',
+            'core/dom/dom.js',
+            'core/dom/dtd.js',
+            'core/dom/domUtils.js',
+            'core/dom/Range.js',
+            'core/dom/Selection.js',
+            'core/Editor.js',
+            'commands/inserthtml.js',
+            'commands/image.js',
+            'commands/justify.js',
+            'commands/font.js',
+            'commands/link.js',
+            'commands/map.js',
+            'commands/iframe.js',
+            'commands/removeformat.js',
+            'commands/blockquote.js',
+            'commands/indent.js',
+            'commands/print.js',
+            'commands/preview.js',
+            'commands/spechars.js',
+            'commands/emotion.js',
+            'commands/selectall.js',
+            'commands/paragraph.js',
+            'commands/directionality.js',
+            'commands/horizontal.js',
+            'commands/time.js',
+            'commands/rowspacing.js',
+            'commands/lineheight.js',
+            'commands/cleardoc.js',
+            'commands/anchor.js',
+            'commands/delete.js',
+            'commands/wordcount.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/checkimage/checkimage.js',
+            'plugins/undo/undo.js',
+            'plugins/paste/paste.js', //粘贴时候的提示依赖了UI
+            'plugins/list/list.js',
+            'plugins/source/source.js',
+            'plugins/shortcutkeys/shortcutkeys.js',
+            'plugins/enterkey/enterkey.js',
+            'plugins/keystrokes/keystrokes.js',
+            'plugins/fiximgclick/fiximgclick.js',
+            'plugins/autolink/autolink.js',
+            'plugins/autoheight/autoheight.js',
+            'plugins/autofloat/autofloat.js', //依赖UEditor UI,在IE6中，会覆盖掉body的背景图属性
+            'plugins/highlight/highlight.js',
+            'plugins/serialize/serialize.js',
+            'plugins/video/video.js',
+            'plugins/table/table.js',
+            'plugins/contextmenu/contextmenu.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/basestyle/basestyle.js',
+            'plugins/elementpath/elementpath.js',
+            'plugins/formatmatch/formatmatch.js',
+            'plugins/searchreplace/searchreplace.js',
+            'plugins/customstyle/customstyle.js',
+            'ui/ui.js',
+            'ui/uiutils.js',
+            'ui/uibase.js',
+            'ui/separator.js',
+            'ui/mask.js',
+            'ui/popup.js',
+            'ui/colorpicker.js',
+            'ui/tablepicker.js',
+            'ui/stateful.js',
+            'ui/button.js',
+            'ui/splitbutton.js',
+            'ui/colorbutton.js',
+            'ui/tablebutton.js',
+            'ui/toolbar.js',
+            'ui/menu.js',
+            'ui/combox.js',
+            'ui/dialog.js',
+            'ui/menubutton.js',
+            'ui/datebutton.js',
+            'ui/editorui.js',
+            'ui/editor.js',
+            'ui/multiMenu.js'
+        ];
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../themes/default/ueditor.css"/>
+</head>
+<body>
+<h1>UEditor自定义插件</h1>
+
+<!--style给定宽度可以影响编辑器的最终宽度-->
+<script type="text/plain" id="myEditor" style="width:1000px">
+    <p><img src="http://ueditor.baidu.com/img/logo.png" alt=""></p>
+    <p>插件描述：选中图片，在其上单击，会改变图片的边框！</p>
+</script>
+<script type="text/javascript">
+    var editor_a = new baidu.editor.ui.Editor();
+    editor_a.render( 'myEditor' );
+
+    //创建一个在选中的图片单击时添加边框的插件，其实质就是在baidu.editor.plugins塞进一个闭包
+    baidu.editor.plugins["addborder"] = function () {
+        var me = editor_a;  //在此处添加的插件由于没有经过render操作将editor实例传入，因此需要手动传入editor_a对象，如果按照官网教程来做，此处的editor_a使用this对象替换即可
+
+        //创建一个改变图片边框的命令
+        me.commands["addborder"] = {
+            execCommand:function () {
+                //获取当前选区
+                var range = me.selection.getRange();
+                //选区没闭合的情况下操作
+                if ( !range.collapsed ) {
+                    //图片判断
+                    var img = range.getClosedNode();
+                    if ( img && img.tagName == "IMG" ) {
+                        if(img.style.borderWidth == "5px" ){
+                            img.style.borderWidth = "1px";
+                        }else{
+                            img.style.border = "5px solid red";
+                        }
+                    }
+                }
+            }
+        };
+        //注册一个触发命令的事件，同学们可以在任意地放绑定触发此命令的事件
+        me.addListener( 'click', function () {
+            me.execCommand( "addborder" );
+        } );
+    }();
+</script>
+
+</body>
+
+
+</html>

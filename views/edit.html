@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Air Board - 编辑</title>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/json2.js"></script>
+<script type="text/javascript" src="./js/socket.io.js"></script>
+<script type="text/javascript" src="./js/diff_match_patch.js"></script>
+<script type="text/javascript" src="./js/ueditor/editor_config.js"></script>
+<script type="text/javascript" src="./js/ueditor/editor_all.js"></script>
+<script type="text/javascript" src="./js/edit/logic.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/edit.css" />
+<link rel="stylesheet" type="text/css" href="./js/ueditor/themes/default/ueditor.css" />
+</head>
+
+<body id="body">
+	<div id="header">
+		<a id="logo" href="/"></a>
+		<div id="tip">
+			<div id="tip-logo"></div>
+			<div id="tip-text">正在自动保存...</div>
+		</div>
+	</div>
+	<div id="toolbar">
+		<div id="title-box">
+			<div id="title-logo"></div>
+			<div id="title-text">未命名白板</div>
+			<input id="title-input" type="text"></input>
+		</div>
+		<div id="tag-box">
+			<div id="tag-logo"></div>
+			<div id="tag-text">默认标签</div>
+			<input id="tag-input" type="text"></input>
+		</div>
+		<ul id="tools">
+			<li id="icon-save" onclick="fullSaveHandle();">保存</li>
+			<li id="icon-cancel" onclick="abortSaveHandle();">放弃</li>
+			<!--<li id="icon-lock" onclick="publishHandle();">发布</li>-->
+		</ul>
+	</div>
+	<div id="ueditor"></div>
+	<div id="footer"></div>
+	<span id="edit-flag">${flag}</span>
+</body>
+	<script type="text/javascript">
+		var editor = new baidu.editor.ui.Editor();
+		editor.render("ueditor");
+	</script>
+</html>

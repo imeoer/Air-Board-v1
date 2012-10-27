@@ -1,0 +1,48 @@
+body{background-color:#f0f0f0;font-family:微软雅黑, 宋体;font-size:12px;margin:0;padding:0;-webkit-text-size-adjust:none;}
+*:focus{outline:none;}
+#header{width:100%;height:30px;background-color:#1c1c1c;border-bottom:1px #3f3f3f solid;text-align:center;}
+#setting{width:17px;height:17px;background:url('../img/manage/setting.png') no-repeat;margin:7px;margin-left:15px;float:left;}
+#username{color:#fff;margin-top:7px;margin-left:7px;float:left;}
+#tip{margin-left:5px;margin-top:3px;float:left;display:none;}
+#tip-logo{width:24px;height:24px;background:url('../img/edit/loading.gif') no-repeat;float:left;}
+#tip-text{margin-left:6px;margin-top:5px;color:#fff;float:left;}
+#footer{width:100%;height:30px;background-color:#1c1c1c;border-top:1px #3f3f3f solid;position:absolute;bottom:0;float:left;z-index:100000;display:none;}
+#toolbar{width:100%;height:60px;background-color:#fafafa;border-bottom:1px #e3e3e3 solid;}
+#tools{height:27px;margin-left:-45px;margin-top:7px;font-weight:bold;list-style:none;float:right;}
+#tools li{width:60px;height:27px;float:left;margin-right:0px;margin-left:0px;padding-top:29px;background-position:center top;color:#575757;text-align:center;cursor:pointer;}
+#tools li:hover{background-position:center top;color:#0072ff;}
+
+#icon-save{background:url('../img/edit/icon_save.png') no-repeat}
+#icon-cancel{background:url('../img/edit/icon_cancel.png') no-repeat}
+#icon-shot{background:url('../img/edit/icon_shot.png') no-repeat}
+#icon-lock{background:url('../img/edit/icon_lock.png') no-repeat}
+#icon-addhelper{background:url('../img/edit/icon_addhelper.png') no-repeat}
+
+#icon-save:hover{background:url('../img/edit/icon_save_over.png') no-repeat}
+#icon-cancel:hover{background:url('../img/edit/icon_cancel_over.png') no-repeat}
+#icon-shot:hover{background:url('../img/edit/icon_shot_over.png') no-repeat}
+#icon-lock:hover{background:url('../img/edit/icon_lock_over.png') no-repeat}
+#icon-addhelper:hover{background:url('../img/edit/icon_addhelper_over.png') no-repeat}
+
+#ueditor{height:500px;overflow:visible;}
+
+#title-box{margin:20px;float:left;height:15px;}
+#title-logo{width:22px;height:22px;background:url('../img/edit/title_logo.png') no-repeat;float:left;}
+#title-text,#title-input{margin-left:7px;margin-top:-1px;float:left;font-size:18px;}
+#title-text{cursor:pointer;}
+#title-input{display:none;margin-top:-3px;width:400px;}
+#title-text:hover{color:#0072ff;}
+
+#tag-box{margin-top:21px;margin-left:0px;float:left;}
+#tag-logo{border-left:5px #FF2600 solid;float:left;height:20px;}
+#tag-text{margin-top:2px;margin-left:6px;float:left;cursor:pointer;}
+#tag-text:hover{color:#0072ff;}
+#tag-input{margin-top:-1px;margin-left:6px;width:100px;float:left;display:none;}
+
+::-webkit-scrollbar{background:#fff;}
+::-webkit-scrollbar-thumb {background:#616161;}
+::-webkit-scrollbar:vertical{width:6px;height:2px;}
+::-webkit-scrollbar{border-left:1px #d4d4d4 solid;}
+
+#edit-flag{display:none;}
+#logo{width:173px;height:22px;background:url('../img/edit/logo.png') no-repeat;float:left;margin-top:5px;margin-left:4px;}

@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+   
+    <script type="text/javascript" charset="utf-8" src="../editor_config.js"></script>
+
+    <!--开发版-->
+    <script type="text/javascript" charset="utf-8" src="editor_api.js">
+        paths = [
+            'editor.js',
+            'core/browser.js',
+            'core/utils.js',
+            'core/EventBase.js',
+            'core/dom/dom.js',
+            'core/dom/dtd.js',
+            'core/dom/domUtils.js',
+            'core/dom/Range.js',
+            'core/dom/Selection.js',
+            'core/Editor.js',
+            'commands/inserthtml.js',
+            'commands/image.js',
+            'commands/justify.js',
+            'commands/font.js',
+            'commands/link.js',
+            'commands/map.js',
+            'commands/iframe.js',
+            'commands/removeformat.js',
+            'commands/blockquote.js',
+            'commands/indent.js',
+            'commands/print.js',
+            'commands/preview.js',
+            'commands/spechars.js',
+            'commands/emotion.js',
+            'commands/selectall.js',
+            'commands/paragraph.js',
+            'commands/directionality.js',
+            'commands/horizontal.js',
+            'commands/time.js',
+            'commands/rowspacing.js',
+            'commands/lineheight.js',
+            'commands/cleardoc.js',
+            'commands/anchor.js',
+            'commands/delete.js',
+            'commands/wordcount.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/checkimage/checkimage.js',
+            'plugins/undo/undo.js',
+            'plugins/paste/paste.js', //粘贴时候的提示依赖了UI
+            'plugins/list/list.js',
+            'plugins/source/source.js',
+            'plugins/shortcutkeys/shortcutkeys.js',
+            'plugins/enterkey/enterkey.js',
+            'plugins/keystrokes/keystrokes.js',
+            'plugins/fiximgclick/fiximgclick.js',
+            'plugins/autolink/autolink.js',
+            'plugins/autoheight/autoheight.js',
+            'plugins/autofloat/autofloat.js', //依赖UEditor UI,在IE6中，会覆盖掉body的背景图属性
+            'plugins/highlight/highlight.js',
+            'plugins/serialize/serialize.js',
+            'plugins/video/video.js',
+            'plugins/table/table.js',
+            'plugins/contextmenu/contextmenu.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/basestyle/basestyle.js',
+            'plugins/elementpath/elementpath.js',
+            'plugins/formatmatch/formatmatch.js',
+            'plugins/searchreplace/searchreplace.js',
+            'plugins/customstyle/customstyle.js',
+            'ui/ui.js',
+            'ui/uiutils.js',
+            'ui/uibase.js',
+            'ui/separator.js',
+            'ui/mask.js',
+            'ui/popup.js',
+            'ui/colorpicker.js',
+            'ui/tablepicker.js',
+            'ui/stateful.js',
+            'ui/button.js',
+            'ui/splitbutton.js',
+            'ui/colorbutton.js',
+            'ui/tablebutton.js',
+            'ui/toolbar.js',
+            'ui/menu.js',
+            'ui/combox.js',
+            'ui/dialog.js',
+            'ui/menubutton.js',
+            'ui/datebutton.js',
+            'ui/editorui.js',
+            'ui/editor.js',
+            'ui/multiMenu.js'
+        ];
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../themes/default/ueditor.css"/>
+</head>
+<body>
+<h1>UEditor多实例</h1>
+
+<!--style给定宽度可以影响编辑器的最终宽度-->
+<script type="text/plain" id="myEditor" style="width:800px">
+    <h1 style="border-bottom:#ccc 2px solid; text-align:center; padding-bottom:0px; margin:0px 0px 20px; padding-left:0px; padding-right:4px; padding-top:0px" label="标题">
+    1.1.8 改进点
+</h1>
+<ol style="list-style-type:decimal">
+    <li>
+        <p>
+            避免了重复加载源码高亮的核心代码
+        </p>
+    </li>
+    <li>
+        <p>
+            修复了word粘贴table过滤出错问题
+        </p>
+    </li>
+    <li>
+        <p>
+            修复插入地图会出现style=&quot;undefined&quot;的问题&nbsp;
+        </p>
+    </li>
+    <li>
+        <p>
+            优化了list，多个相邻的属性一直的list会合并
+        </p>
+    </li>
+    <li>
+        <p>
+            可以在列表中的一行里产生多行的效果（通过回车再回退操作），类似office的效果
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong><span style="color:#ff3300">添加自定义样式功能</span></strong>
+        </p>
+        <p>
+            <span label="强调" style="font-style:italic; font-weight:bold; ">现在是强调</span>
+        </p>
+        <p>
+            <span label="明显强调" style="font-style:italic; font-weight:bold; color:#3399cc; ">现在是明显强调</span><br />
+        </p>
+    </li>
+    <li>
+        <p>
+            修了在chrome下右键删除td里的图片会把整个td删除的问题
+        </p>
+    </li>
+    <li>
+        <p>
+            改进了不同的页面调用一个editor，URL问题
+        </p>
+    </li>
+    <li>
+        <p>
+            增加了颜色选择器的颜色
+        </p>
+    </li>
+    <li>
+        <p>
+            改进了提供的后台程序的安全性
+        </p>
+    </li>
+    <li>
+        <p>
+            <span style="color:#3399cc" label="明显强调">代码高亮支持折行</span>
+        </p>
+        <pre class="brush:js;toolbar:false;">
+            if&nbsp;(&nbsp;/^(mso|column|font-emph|lang|layout|line-break|list-image|nav|panose|punct|row|ruby|sep|size|src|tab-|table-border|text-(?:decor|trans)|top-bar|version|vnd|word-break)/.test(&nbsp;name&nbsp;)&nbsp;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(&nbsp;!/mso\-list/.test(&nbsp;name&nbsp;)&nbsp;)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </pre>
+    </li>
+    <li>
+        <p>
+            <span style="color:#3399cc" label="明显强调">改进了源码编辑模式下的性能(ie下),并且支持自动换行</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            修改了在destroy之后会在ie下报错的问题
+        </p>
+    </li>
+    <li>
+        <p>
+            给初始化容器name值，那么在后台取值的键值就是name给定的值，方便多实例在一个form下提交
+        </p>
+    </li>
+    <li>
+        <p>
+            支持插入script/style这样的标签
+        </p>
+        <p>
+            <span style="font-size:14px">说明：通过在editor_config.js里搜索&nbsp;</span><span style="color:#ff3399;font-size:14px">blacklist</span><span style="font-size:14px">关键字，去掉script后者style字段，就可以插入相应的标签</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            修复了列表里插入浮动图片，图片不占位问题
+        </p>
+        <p>
+            <img src="http://www.baidu.com/img/baidu_sylogo1.gif" width="270" height="129" style="float:right; " border="2" hspace="0" vspace="0" /><span style="font-size:14px">右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入了一张图右边插入</span>
+        </p>
+    </li>
+</ol></script>
+ <script type="text/plain" id="myEditor1" style="width:800px">
+        <p>这里我可以写一些输入提示</p>
+    </script>
+<script type="text/javascript">
+    var editor_a = new baidu.editor.ui.Editor();
+    editor_a.render( 'myEditor' );
+
+
+    var editor_a1 = new baidu.editor.ui.Editor({
+        //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+        toolbars:[['FullScreen', 'Source', 'Undo', 'Redo','Bold']],
+        //focus时自动清空初始化时的内容
+        autoClearinitialContent:true,
+        //关闭字数统计
+        wordCount:false,
+        //关闭elementPath
+        elementPathEnabled:false
+        //更多其他参数，请参考editor_config.js中的配置项
+    });
+    editor_a1.render( 'myEditor1' );
+</script>
+
+</body>
+
+
+</html>

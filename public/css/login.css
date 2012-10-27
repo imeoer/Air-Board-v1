@@ -1,0 +1,54 @@
+body{background-color:#303030;font-family:微软雅黑, 宋体;font-size:12px;color:#ffffff;margin:0;padding:0;-webkit-text-size-adjust:none;}
+body a{color:#6a7b8d;cursor:pointer;}
+body a:hover{color:#009cff;}
+*:focus{outline:none;}
+#header{width:100%;height:30px;background-color:#1c1c1c;border-bottom:1px #3f3f3f solid;}
+#footer{width:100%;height:30px;background-color:#1c1c1c;border-top:1px #3f3f3f solid;position:absolute;bottom:0;}
+#main{width:655px;height:240px;}
+
+#logo{width:192px;height:34px;background:url('../img/login/logo.png') no-repeat;margin-bottom:1px;margin-left:-3px;}
+
+#left{width:380px;height:200px;background-color:#ffffff;border:1px #dbdbdb solid;float:left;}
+#slider{width:370px;height:190px;margin:5px;}
+
+#right{width:260px;height:200px;background-color:#ffffff;border:1px #dbdbdb solid;margin-left:10px;float:left;}
+#login{width:235px;height:30px;margin-left:12px;margin-top:12px;}
+#login-logo{width:46px;height:21px;background:url('../img/login/login_logo.png') no-repeat;float:left;}
+#login-info{float:right;color:#6a7b8d;margin-top:3px;}
+#login-info-text{margin-left:5px;float:left;}
+#login-info-logo{width:16px;height:16px;background:url('../img/login/info_icon.png') no-repeat;float:left;display:none;}
+#user-back{width:235px;height:24px;background:url('../img/login/user_back.png') no-repeat;margin-left:12px;}
+#main-login{margin-top:5px;}
+#pass-back{width:235px;height:24px;background:url('../img/login/pass_back.png') no-repeat;margin-left:12px;margin-top:10px;}
+.login-input{width:205px;border:0;margin-left:21px;margin-top:3px;background-color: transparent;color:#b0b0b0}
+
+.button{width:72px;height:29px;border:0;text-align:center;cursor:pointer;background:url('../img/login/button_back.png') no-repeat;color:#6a7b8d;opacity:0.8;}
+.button:hover{background:url('../img/login/button_back_hover.png') no-repeat;}
+.button div{margin-top:6px;}
+
+#button-login-icon{width:15px;height:15px;background:url('../img/login/login_icon.png') no-repeat;margin-top:7px;margin-left:15px;float:left;}
+#button-login-content{margin-left:-5px;}
+#login-button{margin-right:13px;margin-top:12px;float:right;}
+#reg-button{margin-right:7px;margin-top:12px;float:right;}
+.line{width:235px;height:1px;border-top:1px #e5e5e5 solid;margin-left:12px;margin-top:52px;}
+#help{margin-right:13px;display:block;margin-top:12px;float:right;}
+
+#lean_overlay{position: fixed;z-index:100;top:0px;left:0px;height:100%;width:100%;background: #0d0d0d;display: none}
+#reg-dlg{margin-top:50px;position: fixed;z-index:100;top:150px;left:50px;height:327px;width:320px;background: #fff;display: none;border:1px #dbdbdb solid;padding:10px;}
+#reg-form{list-style:none;margin:0 auto;margin-top:25px;}
+#reg-form li{margin-top:5px;color: #6a7b8d;}
+.reg-input{border:0;margin-top:4px;background-color:transparent;color:#b0b0b0;border:1px #dbdbdb solid;width:196px;}
+#reg-logo{width:46px;height:21px;background:url('../img/login/reg_logo.png') no-repeat;margin-left:12px;margin-top:12px;}
+#reg-msg{float:right;margin-right:13px;margin-top:-18px;}
+#re-reg-button{margin-top:30px;margin-right:42px;float:right;}
+.reg-input-tip{margin-left:40px;color:#004eff;font-size:12px;display:block}
+
+#reg-info{margin-left:40px;margin-top:13px;float:left;}
+#reg-info-ico{width:16px;height:16px;background:url('../img/login/loading.gif') no-repeat;float:left;}
+#reg-info-tip{margin-left:6px;color:#6a7b8d;float:left;}
+
+#state{margin-right:10px;display:block;margin-top:6px;float:right;}
+#contact{margin-right:10px;margin-top:6px;float:right;}
+
+#ckepop{margin-left:9px;margin-top:7px;float:left;}
+#reg-number{margin-left:0px;margin-top:6px;float:right;margin-right:5px;color:#6a7b8d;}

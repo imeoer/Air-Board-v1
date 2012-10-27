@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Air Board - 轻量在线白板服务</title>
+<link rel="stylesheet" href="./css/login.css"/>
+<link rel="stylesheet" href="./css/nivo-slider.css"/>
+<link rel="stylesheet" href="./css/themes/default/default.css"/>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/json2.js"></script>
+<script type="text/javascript" src="./js/jquery.leanModal.js"></script>
+<script type="text/javascript" src="./js/login/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="./js/login/logic.js"></script>
+</head>
+
+<body>
+	<div id="lean_overlay"></div>
+	<div id="reg-dlg">
+		<div id="reg-logo"></div>
+		<a id="reg-msg">Air Board 用户隐私声明</a>
+		<ul id="reg-form">
+			<li>账户：
+				<input type="text" tabindex="1" class="reg-input" id="reg-user-name" name="reg_user_name"></input>
+			</li>
+			<li id="reg-user-name-tip" class="reg-input-tip"><br/></li>
+			<li>密码：
+				<input type="password" tabindex="1" class="reg-input" id="reg-user-pass" name="reg_user_pass"></input>
+			</li>
+			<li id="reg-user-pass-tip" class="reg-input-tip"><br/></li>
+			<li>重复：
+				<input type="password" tabindex="1" class="reg-input" id="reg-user-repass"></input>
+			</li>
+			<li id="reg-user-repass-tip" class="reg-input-tip"><br/></li>
+			<li>邮箱：
+				<input type="text" tabindex="1" class="reg-input" id="reg-user-mail" name="reg_user_mail"></input>
+			</li>
+			<li id="reg-user-mail-tip" class="reg-input-tip"><br/></li>
+			<li class="button" id="re-reg-button" onclick="checkRegForm();">
+				<div id="button-reg-content">注册</div>
+			</li>
+		</ul>
+		<div id="reg-info">
+			<div id="reg-info-ico"></div>
+			<div id="reg-info-tip">正在注册...</div>
+		</div>
+	</div>
+	<div id="header">
+
+	<!-- JiaThis Button BEGIN -->
+	<div id="ckepop">
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt" target="_blank">分享Air Board</a>
+	</div>
+	<script type="text/javascript" >
+	var jiathis_config={
+		url:"http://ab.ctshare.com/",
+		summary:"轻量在线白板服务",
+		title:"轻量在线白板服务 #Air Board#",
+		hideMore:false
+	}
+	</script>
+	<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+
+	</div>
+	<div id="main">
+		<div id="logo"></div>
+		<div id="left">
+			<div id="slider" class="nivoSlider">
+				<img src="./img/ad/1.jpg"/>
+				<img src="./img/ad/2.jpg"/>
+			</div>
+		</div>
+		<div id="right">
+			<div id="login">
+				<div id="login-logo"></div>
+				<div id="login-info">
+					<div id="login-info-logo"></div>
+					<div id="login-info-text">${info}</div>
+				</div>
+			</div>
+			<form name="userLoginForm" id="main-login" method="post" action="login" onsubmit="return checkLoginForm()">
+				<div id="user-back">
+					<input class="login-input" id="user-input" type="text" tabindex="1" name="user[name]"></input>
+				</div>
+				<div id="pass-back">
+					<input class="login-input" id="pass-input" type="password" tabindex="2" name="user[pass]"></input>
+				</div>
+				<div class="button" id="login-button" onclick="checkLoginForm()">
+					<div id="button-login-icon"></div>
+					<div id="button-login-content">登录</div>
+				</div>
+				<div class="button" id="reg-button" href="#reg-dlg">
+					<div id="button-reg-content">注册</div>
+				</div>
+			</form>
+			<div class="line"></div>
+			<a id="help">关于Air Board</a>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="reg-number">蜀ICP备10013657号-1</div>
+		<a id="state">隐私声明</a>
+		<a id="contact">Air Board - I.F Studio ©2012</a>
+	</div>
+</body>
+</html>

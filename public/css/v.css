@@ -1,0 +1,60 @@
+body{background-color:#e9e9e9;font-family:微软雅黑, 宋体;font-size:12px;margin:0;padding:0;-webkit-text-size-adjust:none;}
+*:focus{outline:none;}
+
+body a{color:#0084ff;cursor:pointer;text-decoration:none;}
+body a:hover{color:#359eff;}
+
+#header{width:100%;height:30px;background-color:#1c1c1c;border-bottom:1px #3f3f3f solid;text-align:center;}
+#view{-webkit-box-shadow:0 0 4px #c0c0c0;-moz-box-shadow:0 0 4px #c0c0c0;margin-top:3px;width: 800px;height:100%;padding: 27px;padding-top: 15px;padding-bottom: 15px;background-color: #fff;border: 1px solid #b8b8b8;overflow:hidden;margin:0 auto;}
+#title{width:800px;height:30px;margin:0 auto;margin-top:12px;}
+#title-logo{width:22px;height:22px;background:url('../img/edit/title_logo.png') no-repeat;float:left;margin-left:-28px;}
+#title-text{float:left;font-size:18px;margin-left:3px;margin-top:-1px;}
+#view-flag{display:none;}
+
+.frame{-webkit-box-shadow:0 0 4px #c0c0c0;-moz-box-shadow:0 0 4px #c0c0c0;height:100%;padding: 27px;padding-top: 15px;padding-bottom: 15px;background-color: #fff;border: 1px solid #ccc;overflow:hidden;margin:0 auto;}
+
+#comment{width: 800px;margin-top:6px;cursor:pointer;}
+#comment{text-align:center;margin-bottom:0px;}
+#comment:hover{background-color: #f6f6f6;}
+#comment-logo{width:24px;height:25px;background:url('../img/view/comment_logo.png') no-repeat;float:left;margin-left:360px;}
+#comment-text{float:left;margin-left:8px;margin-top:5px;color:#676767;}
+
+#my-comment{width: 800px;margin-top:6px;margin-bottom:120px;display:none;}
+#my-comment-text-input{border:2px #e5e5e5 solid;float:left;width: 786px;height:80px;margin-top:12px;margin-bottom:10px;font-family:微软雅黑, 宋体;font-size:12px;color: #a7a7a7;padding:5px;}
+#my-comment-logo{width:167px;height:25px;background:url('../img/view/my_comment_logo.png') no-repeat;margin-top:10px;float:left;}
+
+.button{width:72px;height:29px;border:0;text-align:center;cursor:pointer;background:url('../img/login/button_back.png') no-repeat;color:#6a7b8d;opacity:0.8;}
+.button:hover{background:url('../img/login/button_back_hover.png') no-repeat;}
+.button div{margin-top:6px;}
+#submit-my-comment{float:right;margin-top:10px;}
+#my-comment-tip{float:right;margin-top:17px;margin-right:10px;color:#00a8ff;}
+
+#comment-view{color: #8d8d8d;width: 800px;margin-top:6px;display:none;}
+#comment-view-logo{width:132px;height:25px;background:url('../img/view/comment_list_logo.png') no-repeat;margin-top:10px;margin-bottom:20px;}
+.comment-item{margin-top:15px;border-bottom:1px #d3d3d3 dashed;padding-bottom:12px;}
+.comment-num{color: #787878;float:left;margin-right:10px;font-weight:bold;}
+.comment-time{color: #787878;}
+.comment-user{color: #787878;float: left;margin-right:7px;}
+.comment-content{margin-top:6px;margin-left:25px;}
+.comment-del{float:right;color:#0084ff;cursor:pointer;display:none;}
+.comment-del:hover{color:#00519c;}
+
+#view-comment{width:24px;height:25px;background:url('../img/view/comment_logo.png') no-repeat;float:right;cursor:pointer;margin-right:-30px;}
+#view-comment:hover{background:url('../img/view/comment_logo_hover.png') no-repeat;}
+
+#logo{width:173px;height:22px;background:url('../img/edit/logo.png') no-repeat;float:left;margin-top:5px;margin-left:4px;}
+
+#note-input{width:156px;height:49px;border:1px #9f9f9f dashed;font-family:微软雅黑, 宋体;font-size:12px;color: #adadad;position:absolute;z-index:1;background-color:#2a2a2a;min-width:320px;display:none;}
+#note-tip{width:93px;height:18px;background:url('../img/view/note_tip.png') no-repeat;position:absolute;z-index:1;display:none;}
+
+.note-item{position:absolute;z-index:999999999;width:156px;height:49px;border:1px #0084ff dashed;}
+.note-source{position:absolute;z-index:999999999;color: #acacac;border:1px #9f9f9f dashed;background-color:#2a2a2a;padding:3px;display:none;}
+.note-show{position:absolute;z-index:999999999;color: #fff;border:1px #9f9f9f dashed;background-color:#2a2a2a;padding:3px;display:none;}
+#note-info{position:absolute;z-index:1;color:#6fbaff;display:none;}
+#view-note-switch{width:22px;height:23px;background:url('../img/view/note_logo.png') no-repeat;float:right;margin-right:7px;}
+#view-note-switch:hover{background:url('../img/view/note_logo_hover.png') no-repeat;cursor:pointer;}
+
+::-webkit-scrollbar{background:#fff;}
+::-webkit-scrollbar-thumb {background:#616161;}
+::-webkit-scrollbar{width:7px;height:7px;}
+::-webkit-scrollbar{border-left:1px #d4d4d4 solid;}

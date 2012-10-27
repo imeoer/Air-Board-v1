@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Air Board - 管理</title>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/json2.js"></script>
+<script type="text/javascript" src="./js/socket.io.js"></script>
+<script type="text/javascript" src="./js/jquery.leanModal.js"></script>
+<script type="text/javascript" src="./js/manage/logic.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/manage.css" />
+</head>
+
+<body id="body">
+	<div id="lean_overlay"></div>
+	<div id="info-dlg">
+		<center>
+			<div id="info-dlg-close">×</div>
+			<div id=info-dlg-icon></div>
+			<div id=info-dlg-text>该分类还未包含任何内容<br/>单击左上角<b>“创建文档”</b>添加</div>
+			<div class="button" id="info-dlg-confirm">
+				<center>确定</center>
+			</div>
+			<div class="button" id="info-dlg-cancel">
+				<center>取消</center>
+			</div>
+		</center>
+	</div>
+	<div id="setting-dlg">
+		<div id="setting-logo"></div>
+		<div id="setting-main">
+			<div id="pass-setting">● 密码设置</div>
+			<ul>
+				<li>原始密码：<input type="password" id="origin-pass"></input></li>
+				<li>新设密码：<input type="password" id="new-pass"></input></li>
+				<li>重复密码：<input type="password" id="re-new-pass"></input></li>
+				<li id="modify-pass-tip"><br/></li>
+			</ul>
+		</div>
+		<div class="button" id="info-dlg-confirm">
+			<center>确定</center>
+		</div>
+		<div class="button" id="info-dlg-cancel">
+			<center>取消</center>
+		</div>
+		</div>
+	<div id="header">
+		<div id="setting">
+			<div id="setting-icon"></div>
+		</div>
+		<div id="setting-content">
+			<a href="/logout">注销</a>
+			<a id="setting-set" href="#setting-dlg">设置</a>
+		</div>
+		<div id="message" title="Air Board Beta 版测试公告" onclick="window.open('/');" target="_blank"></div>
+		<div id="username">${name}</div>
+		<div id="tip">
+			<div id="tip-logo"></div>
+			<div id="tip-text">正在自动保存...</div>
+		</div>
+	</div>
+	<div id="toolbar">
+		<div id="logo"></div>
+	</div>
+	<div id="menu">
+		<div id="menu-create-back" onclick="window.open('create');" target="_blank">
+			<div id="menu-create"></div>
+		</div>
+		<div id="menu-quick-create-back" onclick="window.open('/');" target="_blank">
+			<div id="menu-quick-create"></div>
+		</div>
+		<div id="menu-tag-view">
+			<div id="menu-tag-view-logo"></div>
+			<div id="tag-view">
+			</div>
+		</div>
+	</div>
+	<div id="view">
+		<div id="sift-view">
+			<div id="sift-tag">试试单击左侧按钮创建一块白板吧</div>
+		</div>
+		<div id="file-view">
+		</div>
+	</div>
+
+</body>
+</html>

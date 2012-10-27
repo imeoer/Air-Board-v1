@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript">
+        var UEDITOR_HOME_URL = "../";   //指向dialogs，themes等目录的父目录，推荐使用/开头的绝对路径
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../editor_config.js"></script>
+    <!--加入高亮的js和css文件，如果你的编辑器和展示也是一个页面那么高亮的js可以不加载-->
+    <script type="text/javascript" charset="utf-8" src="../third-party/SyntaxHighlighter/shCore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../third-party/SyntaxHighlighter/shCoreDefault.css"/>
+ 
+    <!--开发版-->
+    <script type="text/javascript" charset="utf-8" src="editor_api.js">
+        paths = [
+            'editor.js',
+            'core/browser.js',
+            'core/utils.js',
+            'core/EventBase.js',
+            'core/dom/dom.js',
+            'core/dom/dtd.js',
+            'core/dom/domUtils.js',
+            'core/dom/Range.js',
+            'core/dom/Selection.js',
+            'core/Editor.js',
+            'commands/inserthtml.js',
+            'commands/image.js',
+            'commands/justify.js',
+            'commands/font.js',
+            'commands/link.js',
+            'commands/map.js',
+            'commands/iframe.js',
+            'commands/removeformat.js',
+            'commands/blockquote.js',
+            'commands/indent.js',
+            'commands/print.js',
+            'commands/preview.js',
+            'commands/spechars.js',
+            'commands/emotion.js',
+            'commands/selectall.js',
+            'commands/paragraph.js',
+            'commands/directionality.js',
+            'commands/horizontal.js',
+            'commands/time.js',
+            'commands/rowspacing.js',
+            'commands/lineheight.js',
+            'commands/cleardoc.js',
+            'commands/anchor.js',
+            'commands/delete.js',
+            'commands/wordcount.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/checkimage/checkimage.js',
+            'plugins/undo/undo.js',
+            'plugins/paste/paste.js', //粘贴时候的提示依赖了UI
+            'plugins/list/list.js',
+            'plugins/source/source.js',
+            'plugins/shortcutkeys/shortcutkeys.js',
+            'plugins/enterkey/enterkey.js',
+            'plugins/keystrokes/keystrokes.js',
+            'plugins/fiximgclick/fiximgclick.js',
+            'plugins/autolink/autolink.js',
+            'plugins/autoheight/autoheight.js',
+            'plugins/autofloat/autofloat.js', //依赖UEditor UI,在IE6中，会覆盖掉body的背景图属性
+            'plugins/highlight/highlight.js',
+            'plugins/serialize/serialize.js',
+            'plugins/video/video.js',
+            'plugins/table/table.js',
+            'plugins/contextmenu/contextmenu.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/basestyle/basestyle.js',
+            'plugins/elementpath/elementpath.js',
+            'plugins/formatmatch/formatmatch.js',
+            'plugins/searchreplace/searchreplace.js',
+            'plugins/customstyle/customstyle.js',
+            'ui/ui.js',
+            'ui/uiutils.js',
+            'ui/uibase.js',
+            'ui/separator.js',
+            'ui/mask.js',
+            'ui/popup.js',
+            'ui/colorpicker.js',
+            'ui/tablepicker.js',
+            'ui/stateful.js',
+            'ui/button.js',
+            'ui/splitbutton.js',
+            'ui/colorbutton.js',
+            'ui/tablebutton.js',
+            'ui/toolbar.js',
+            'ui/menu.js',
+            'ui/combox.js',
+            'ui/dialog.js',
+            'ui/menubutton.js',
+            'ui/datebutton.js',
+            'ui/editorui.js',
+            'ui/editor.js',
+            'ui/multiMenu.js'
+        ];
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../themes/default/ueditor.css"/>
+
+</head>
+<body>
+<h1>代码高亮演示</h1>
+<h2>页面上已经有的代码</h2>
+<div style="width:200px">
+    <pre class="brush:js;toolbar:false;">
+        var editor_a = new baidu.editor.ui.Editor();
+        editor_a.render( 'myEditor' );
+    </pre>
+</div>
+
+<!--style给定宽度可以影响编辑器的最终宽度-->
+<script type="text/plain" id="myEditor" style="width:500px">
+    <pre class="brush:js;toolbar:false;">
+     function adjustList(list,tag,style){
+        var nextList = list.nextSibling;
+        if(nextList && nextList.nodeType == 1 && nextList.tagName.toLowerCase() == tag && (domUtils.getStyle(nextList,'list-style-type')||(tag == 'ol'?'decimal' : 'disc')) == style){
+            domUtils.moveChild(nextList,list);
+            if(nextList.childNodes.length == 0){
+                domUtils.remove(nextList);
+            }
+        }
+        var preList = list.previousSibling;
+    }
+</pre>
+     <pre class="brush:js;toolbar:false;">
+    function adjustList(list,tag,style){
+        var nextList = list.nextSibling;
+        if(nextList && nextList.nodeType == 1 && nextList.tagName.toLowerCase() == tag && (domUtils.getStyle(nextList,'list-style-type')||(tag == 'ol'?'decimal' : 'disc')) == style){
+            domUtils.moveChild(nextList,list);
+            if(nextList.childNodes.length == 0){
+                domUtils.remove(nextList);
+            }
+        }
+    }
+</pre>
+</script>
+<script type="text/javascript">
+    //为了在编辑器之外能展示高亮代码
+    SyntaxHighlighter.highlight();
+    var editor_a = new baidu.editor.ui.Editor();
+    editor_a.render( 'myEditor' );
+</script>
+
+</body>
+
+
+</html>
